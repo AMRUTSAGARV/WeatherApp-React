@@ -10,11 +10,12 @@ import Signin from './componets/Signin';
 function App() {
   return (
     <div className="App">
-     <Navigation />
+    
      <BrowserRouter>    
+     <Navigation />
      <Routes>
 
-     <Route path="/home" element={<Home />} />
+     <Route path="/" element={<Home />} />
      <Route path="/products" element={<Products />} />
      <Route path="/signin" element={<Signin />} />
     </Routes>

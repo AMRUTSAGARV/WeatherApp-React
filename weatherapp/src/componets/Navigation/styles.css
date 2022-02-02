@@ -1,0 +1,12 @@
+.nav-container {
+    background-color: rgb(145, 143, 143);
+    padding: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+

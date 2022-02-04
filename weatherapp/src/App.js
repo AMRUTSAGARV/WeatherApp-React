@@ -5,6 +5,7 @@ import Navigation from "./componets/Navigation";
 import Home from './componets/Home';
 import Products from './componets/Products';
 import Signin from './componets/Signin';
+import ProductDescription from './componets/ProductDescription';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
      <Route path="/" element={<Home />} />
      <Route path="/products" element={<Products />} />
      <Route path="/signin" element={<Signin />} />
+     <Route path="/products/proddesc" element={<ProductDescription />} />
     </Routes>
     
      </BrowserRouter>

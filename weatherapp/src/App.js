@@ -13,6 +13,7 @@ const api = {
 
 
 
+
 function App() {
 
   const [query, setQuery] = useState('');
@@ -44,7 +45,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
         <div className='search-box'>
           <input type="text"
@@ -69,7 +70,7 @@ function App() {
                 {Math.round(weather.main.temp)}°C
             </div>
             <div className='weather'>
-                Sunny
+              {weather.weather[0].main}
             </div>
             </div>
           </div>

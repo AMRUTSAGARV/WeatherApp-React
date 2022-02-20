@@ -7,9 +7,16 @@ import "./index.css";
 
 
 const api = {
-  key: "7d4ef5d23648c7c62acd3ccfa1a0a30b",
+  
   base: "https://api.openweathermap.org/data/2.5/"
 }
+
+//my api (93)
+// const api = {
+//   key: "e26f422fd39b9eaae9e3634e7dfb4a93",
+//   base: "https://api.openweathermap.org/data/2.5/"
+// }
+
 
 
 
@@ -21,7 +28,7 @@ function App() {
 
   const search = evt => {
     if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${process.env.REACT_APP_MY_API_KEY}`)
         .then(res => res.json())
         .then(result => {
           setQuery('');
